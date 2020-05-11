@@ -4,14 +4,7 @@ import "./App.css";
 import Form from "./Form.js";
 
 function App() {
-  const [form, setForm] = useState([
-    {
-      Name: "Caleb",
-      Pos: "Wr, CB",
-      age: 24,
-      height: "5'10",
-    },
-  ]);
+  const [form, setForm] = useState([]);
   return (
     <div className="App">
       <div className="App-header">
@@ -20,7 +13,7 @@ function App() {
           className="App-logo"
           alt="Wolf"
         />
-        <h1>Wolf Pak</h1>
+        <h1 button>Wolf Pak</h1>
         <Form form={form} />
       </div>
     </div>
