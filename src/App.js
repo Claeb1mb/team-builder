@@ -2,9 +2,16 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Form from "./Form.js";
+import PlayerForm from "./PlayerForm";
 
 function App() {
-  const [form, setForm] = useState([]);
+  const [card, setCard] = useState([
+    {
+      id: 1,
+      team: "Player Card",
+      name: "name",
+    },
+  ]);
   return (
     <div className="App">
       <div className="App-header">
@@ -14,7 +21,8 @@ function App() {
           alt="Wolf"
         />
         <h1 button>Wolf Pak</h1>
-        <Form form={form} />
+        <Form />
+        <PlayerForm card={card} />
       </div>
     </div>
   );

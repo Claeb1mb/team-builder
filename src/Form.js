@@ -1,18 +1,33 @@
 import React, { useState } from "react";
 
-const Form = (props) => {
+const Form = () => {
+  const [player, setPlayer] = useState({ playerName: "", position: "" });
+  const handleChange = (event) => {
+    setPlayer({ ...player, [event.target.name]: event.target.value });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(player.name);
+    console.log(player.position);
+  };
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-      }}
-    >
+    <form onSubmit={(event) => handleSubmit(event)}>
       <label htmlFor="Player">Player</label>
-      <br></br>
-      <input type="text" placeholder="Name" />
-      <br></br>
-      <input type="text" placeholder="Position" />
-      <br></br>
+      <input
+        name="playerName"
+        type="text"
+        value={player.playerName}
+        placeholder="name"
+        onChange={(event) => handleChange(event)}
+      />
+      <label htmlFor="Position">Position</label>
+      <input
+        name="position"
+        type="text"
+        value={player.position}
+        placeholder="Position"
+        onChange={(event) => handleChange(event)}
+      />
       <button type="submit">Submit</button>
     </form>
   );
