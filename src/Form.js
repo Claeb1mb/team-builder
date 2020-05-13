@@ -9,6 +9,7 @@ const Form = () => {
     event.preventDefault();
     console.log(player.name);
     console.log(player.position);
+    setPlayer({ player: "", position: "" });
   };
   return (
     <form onSubmit={(event) => handleSubmit(event)}>

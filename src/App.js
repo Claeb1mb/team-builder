@@ -20,7 +20,7 @@ function App() {
           className="App-logo"
           alt="Wolf"
         />
-        <h1 button>Wolf Pak</h1>
+        <h1>Wolf Pak</h1>
         <Form />
         <PlayerForm card={card} />
       </div>
